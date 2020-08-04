@@ -9,7 +9,7 @@ import { MovieService } from '../movie.service';
 })
 export class ViewpageComponent implements OnInit {
   snapshotParam = "";
-  public results;
+  public results: any;
   public stars = [];
   public selectedValue: number = 1;
 
