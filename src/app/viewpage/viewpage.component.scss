@@ -1,0 +1,73 @@
+.split {
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.left {
+  width: 40%;
+	left: 0;
+  >.card {
+    margin-right: 60px;
+    float: right;
+    margin-top: 25px;
+    >img {
+      height: 250px;
+      width: 200px;
+    }
+    >h3 {
+      color: #b3b3b5;
+    }
+  }
+}
+.right {
+  width: 60%;
+	right: 0;
+  >h1 {
+    color: #efefef;
+  }
+  >p {
+    color: #abadae;
+    >span {
+      .checked {
+        color: orange;
+      }
+    }
+    >.imdbbox {
+      background-color: #fbb034;
+      background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+      border: solid 1px black;
+      color: black;
+      padding: 2px;
+      font-size: 10px;
+      margin-right: 3px;
+      margin-left: 3px;
+    }
+  }
+}
+
+.button {
+	  background-color: #777d80;
+    border: none;
+    color: white;
+    padding: 13px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 3px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    min-width: 114px;
+    min-height: 80px;
+    &:hover {
+		  background: linear-gradient(#fcb73d, #ffd26d);
+	    color: black;
+	  }
+}
+.active {
+	background: linear-gradient(#fcb73d, #ffd26d);
+	color: black;
+}

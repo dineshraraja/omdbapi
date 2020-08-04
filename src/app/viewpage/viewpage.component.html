@@ -1,0 +1,29 @@
+<div class="container">
+<img width="100%" height="651" style="text-align: center; background-image:url('{{results.Poster}}');background-repeat: no-repeat;background-size: cover;background-color: #141414;
+background-blend-mode: multiply;">
+<div class="split left">
+  <div class="card">
+    <img src="{{results.Poster}}" alt="{{results.Title}}">  
+    <h3>Overview</h3>
+    <h3>Cast</h3>
+  </div>
+</div>
+
+<div class="split right">
+  <h1>{{(results.Title !== "N/A") ? (results.Title) : "" }}</h1>
+  <p>{{(results.Year !== "N/A") ? (results.Year) : "" }}&nbsp;&nbsp;{{(results.Runtime !== "N/A") ? (results.Runtime) : "" }}</p>
+  <p>
+    <span *ngFor="let star of stars">
+      <span [ngClass]="{'checked': (star <= selectedValue)}" class="fa fa-star"></span>
+    </span>
+  &nbsp;({{(results.imdbVotes !== "N/A") ? (results.imdbVotes) : "" }})&nbsp;
+  <span class="imdbbox"><b>IMDb</b></span>{{(results.Ratings[0].Value !== "N/A") ? (results.Ratings[0].Value) : ""}}</p>
+  <p>{{(results.Plot !== "N/A") ? (results.Plot) : ""}}</p>
+  <p>Starring: {{(results.Actors !== "N/A") ? (results.Actors) : ""}}</p>
+  <p>Directed by: {{(results.Director !== "N/A") ? (results.Director) : "" }}</p>
+  <button class="button active">Resume</button>
+  <button class="button">Remove from Watchlist</button>
+  <button class="button">Watch Trailer</button>
+  <button class="button">More Ways to Watch</button>
+</div> 
+</div>

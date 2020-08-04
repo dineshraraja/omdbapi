@@ -1,0 +1,28 @@
+<div class="navbar">
+  <ul class="navlink">
+    <li (click)="getmovielist('movies')">Movies</li>
+    <li (click)="getmovielist('series')">Series</li>
+    <li (click)="getmovielist('anime')">Anime</li>
+    <li (click)="getmovielist('favorites')">Favorites</li>
+  </ul>
+
+  <label for="genre">Genre</label>
+  <select name="genre" id="genre">
+    <option value="all">All</option>
+  </select>
+
+  <label for="sort">Sort by</label>
+  <select name="sort" id="sort">
+    <option value="trending">Trending</option>
+  </select>
+</div>
+
+<div class="result-image">
+  <div class="movie-card" *ngFor="let result of results">
+    <a routerLink="view/{{ result.imdbID }}">
+      <img src="{{ result.Poster }}" alt="{{ result.Title }}"/>
+      <h5>{{ result.Title }}</h5>
+      <p>{{ result.Year }}</p>
+    </a>
+  </div>
+</div>
