@@ -19,7 +19,7 @@ export class MovieService {
     return this.http.get(this.apiurl+'?s='+type+'&r=json&apikey='+this.apikey,{});
   }
 
-  getmoviedetail(slug?: string){
+  getmoviedetail(slug?: string): Observable<any>{
     return this.http.get(this.apiurl+'?i='+slug+'&plot=full&r=json&apikey='+this.apikey,{});
   }
 
